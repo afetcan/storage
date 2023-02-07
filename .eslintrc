@@ -1,0 +1,22 @@
+{
+  "extends": "@antfu",
+  "rules": {
+    "no-console": "off",
+    "no-tabs": "off",
+    "@typescript-eslint/consistent-type-imports": "off",
+    "@typescript-eslint/ban-ts-comment": "off"
+  },
+  "ignorePatterns":[
+    "node_modules",
+    "volumes",
+    "docker",
+    "hive",
+    ".vscode",
+    ".git",
+    "dist",
+    "*.yml",
+    "**/*.yml",
+    "*.yaml",
+    "**/*.yaml"
+  ]
+}

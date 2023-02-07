@@ -1,0 +1,14 @@
+node_modules
+*.log*
+.cache
+.output
+.env
+dist
+
+__generated__/
+
+volumes
+*volumes*
+coverage
+.eslintcache
+out
