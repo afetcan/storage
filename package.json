@@ -29,6 +29,10 @@
   "publishConfig": {
     "access": "public"
   },
+  "engines": {
+    "node": ">=v18.10.0",
+    "pnpm": ">=7.26.3"
+  },
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
