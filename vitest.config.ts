@@ -25,7 +25,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@acildestek/storage': alias('./src/'),
+      '@acildeprem/storage': alias('./src/'),
     },
   },
 })

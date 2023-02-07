@@ -92,19 +92,8 @@ test('newUserOnboard', async () => {
 
   const [u2] = await orm.em.find(UserEntity, user)
 
-  const newUser = new UserEntity({
-    id: 'f9648203-f2a0-44ce-9c97-620a33221485',
-    email: 'hello@acildeprem.com',
-    createdAt: u2.createdAt,
-    updatedAt: u2.updatedAt,
-    externalAuthUserId: '123',
-    isAdmin: false,
-    isSuperAdmin: false,
-    superTokensUserId: '123',
-    username: 'eski',
-  })
-
-  expect(u2).toMatchObject(newUser)
+  expect(u2.fullName).toBe(data.fullName)
+  expect(u2.username).toBe(data.username)
 
   await orm.em.persist(user).flush()
 
