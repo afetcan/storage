@@ -1,0 +1,65 @@
+name: İstek
+description: AcilDeprem kullanımı ile ilgili bir istek bildirin.
+title: "[İstek]: "
+labels: ["istek"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Hayırlı günler, iyi yazılmış bir issua açmak takımımızın işini kolaylaştırır. Lütfen aşağıdaki adımları takip ederek bir issue açın.
+        
+  - type: input
+    id: summary
+    attributes:
+      label: Kısa özet
+      description: Lütfen issue'nunuzun kısa bir özeti girin.
+      placeholder: ex. "yardim id istek attığımda verileri dönmesi gerekiyor."
+    validations:
+      required: false
+
+  - type: textarea
+    id: istek
+    attributes:
+      label: İsteğiniz açıklaması
+      description:  Lütfen issue'nuzun ne olduğunu açıklayın. Fazlasıyla açıklayıcı olunuz.
+      placeholder: ex. "yardim id gonderdigimde geriye yardim bilgilerini döndürsün. Array olmayacak sadece tek bir yardim bilgisi dönsün."
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: İsteğiniz sonucu ne olması gerekiyordu?
+      description: "Lütfen issue'nuzun ne olması gerektiğini açıklayın."
+      placeholder: ex. "Geriye tek bir yardim bilgisi dönsün."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      description: Lütfen issue'nuzun hangi platformda olduğunu seçin.
+      options:
+        - Database - Storage (Default)
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Öncelik
+      multiple: true
+      options:
+        - Low
+        - Medium
+        - High
+  - type: checkboxes
+    id: check
+    attributes:
+      label: Yukarıdaki adımları takip ettiniz mi?
+      description:  Lütfen issue'nuzun yukarıdaki adımları takip ettiğinizden emin olun.
+      options:
+        - label: "Evet, eminim."
+          required: true
+          

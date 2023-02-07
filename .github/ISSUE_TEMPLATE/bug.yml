@@ -1,0 +1,77 @@
+name: Bug Report
+description: AcilDeprem kullanımı ile ilgili bir bug bildirin.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Hayırlı günler, iyi yazılmış bir issua açmak takımımızın işini kolaylaştırır. Lütfen aşağıdaki adımları takip ederek bir issue açın.
+  - type: input
+    id: summary
+    attributes:
+      label: Kısa özet
+      description: Lütfen issue'nunuzun kısa bir özeti girin.
+      placeholder: ex. "yardim listesi görünmüyor."
+    validations:
+      required: false
+  - type: textarea
+    id: problem
+    attributes:
+      label: Sorun açıklaması
+      description:  Lütfen issue'nuzun ne olduğunu açıklayın. Fazlasıyla açıklayıcı olunuz.
+      placeholder: ex. "yardim listesine istek attığımda boş bir liste dönüyor. Aynı isteği Postman ile attığımda ise verileri dönüyor."
+    validations:
+      required: true
+
+  - type: input
+    id: satir
+    attributes:
+      label: Satır sayısı
+      description: Sorunun olduğu satır sayısını girin.
+      placeholder: ex. "12"
+    validations:
+      required: false
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Ne olması gerekiyordu?
+      description: "Lütfen issue'nuzun ne olması gerektiğini açıklayın."
+      placeholder: ex. "yardim listesine istek attığımda verileri dönmesi gerekiyor."
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      description: Lütfen issue'nuzun hangi platformda olduğunu seçin.
+      options:
+        - Database (Default)
+        - Yönetim Paneli
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Öncelik
+      multiple: true
+      options:
+        - Low
+        - Medium
+        - High
+  - type: textarea
+    id: logs
+    attributes:
+      label:  Loglar
+      description: Lütfen issue'nuzun loglarını buraya yapıştırın.
+      render: Shell
+  - type: checkboxes
+    id: check
+    attributes:
+      label: Yukarıdaki adımları takip ettiniz mi?
+      description:  Lütfen issue'nuzun yukarıdaki adımları takip ettiğinizden emin olun.
+      options:
+        - label: "Evet, eminim."
+          required: true
+          

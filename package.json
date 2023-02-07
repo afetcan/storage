@@ -62,6 +62,7 @@
     "@faker-js/faker": "^7.6.0",
     "@types/geojson": "^7946.0.10",
     "@types/wellknown": "^0.5.4",
+    "bumpp": "^8.2.1",
     "consola": "^2.15.3",
     "eslint": "^8.33.0",
     "tslib": "^2.5.0",
