@@ -1,0 +1,26 @@
+{
+  "autorun": false,
+  "terminals": [
+    {
+      "name": "dev",
+      "description": "server dev",
+      "open": true,
+      "cwd": "./",
+      "command": "pnpm build && pnpm dev"
+    },
+    {
+      "name": "test",
+      "description": "Running Test",
+      "open": true,
+      "cwd": "./",
+      "command": "pnpm test"
+    },
+    {
+      "name": "test:watch",
+      "description": "Running Test Watch",
+      "open": true,
+      "cwd": "./",
+      "command": "pnpm test:watch"
+    }
+  ]
+}
