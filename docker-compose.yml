@@ -1,0 +1,135 @@
+version: '3.8'
+
+networks:
+  stack: {}
+
+volumes:
+  acildeprem_db_postgres_data:
+
+services:
+  acildeprem_db:
+    image: postgis/postgis:15-master
+    restart: always
+    volumes:
+      - ./docker/pg-init-scripts:/docker-entrypoint-initdb.d
+      - acildeprem_db_postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: '${POSTGRES_USER}'
+      POSTGRES_PASSWORD: '${POSTGRES_PASSWORD}'
+      POSTGRES_MULTIPLE_DATABASES: '${POSTGRES_DBS}'
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - 'stack'
+    healthcheck:
+      test: pg_isready -q -d ${POSTGRES_DBS} -U ${POSTGRES_USER}
+      interval: 5s
+      timeout: 5s
+      retries: 6
+
+
+  acildeprem_cache:
+    container_name: acildeprem_cache
+    image: redis:7
+    networks:
+      - stack
+
+
+  acildeprem_directus:
+    container_name: acildeprem_directus
+    image: directus/directus:9.22.4
+    ports:
+      - 8055:8055
+    volumes:
+      # By default, uploads are stored in /directus/uploads
+      # Always make sure your volumes matches the storage root when using
+      # local driver
+      # - ./acildeprem/uploads:/directus/uploads
+      # Make sure to also mount the volume when using SQLite
+      # - ./database:/directus/database
+      # If you want to load extensions from the host
+      - ./acildeprem/directus/extensions:/directus/extensions
+    networks:
+      - stack
+    depends_on:
+      - acildeprem_cache
+      - acildeprem_db
+    environment:
+      KEY: '255d861b-5ea1-5996-9aa3-922530ec40b1'
+      SECRET: '6116487b-cda1-52c2-b5b5-c8022c45e263'
+
+      DB_CLIENT: 'pg'
+      DB_HOST: 'acildeprem_db'
+      DB_PORT: '5432'
+      DB_DATABASE: 'postgres'
+      DB_SCHEMA: 'directus'
+      DB_CUSTOM_SCHEMA: 'directus'
+      DB_USER: '${POSTGRES_USER}'
+      DB_PASSWORD: '${POSTGRES_PASSWORD}'
+      DB_SEARCH_PATH: "array:directus,auth,public"
+
+
+      CACHE_ENABLED: 'true'
+      CACHE_STORE: 'redis'
+      CACHE_REDIS: 'redis://acildeprem_cache:6379'
+
+      ADMIN_EMAIL: 'admin@example.com'
+      ADMIN_PASSWORD: 'd1r3ctu5'
+
+
+  # supertokens:
+  #   image: registry.supertokens.io/supertokens/supertokens-postgresql:4.3
+  #   depends_on:
+  #     db:
+  #       condition: service_healthy
+  #   ports:
+  #     - 3567:3567
+  #   environment:
+  #     POSTGRESQL_USER: '${POSTGRES_USER}'
+  #     POSTGRESQL_PASSWORD: '${POSTGRES_PASSWORD}'
+  #     POSTGRESQL_DATABASE_NAME: '${SUPERTOKENS_POSTGRES_DB}'
+  #     POSTGRESQL_TABLE_SCHEMA: 'auth'
+  #     # POSTGRESQL_TABLE_NAMES_PREFIX: 'supertokens'
+  #     POSTGRESQL_HOST: db
+  #     POSTGRESQL_PORT: 5432
+  #     API_KEYS: '${SUPERTOKENS_API_KEY}'
+  #   restart: always
+  #   healthcheck:
+  #     test: >
+  #       bash -c 'exec 3<>/dev/tcp/127.0.0.1/3567 && echo -e "GET /hello HTTP/1.1\r\nhost: 127.0.0.1:3567\r\nConnection: close\r\n\r\n" >&3 && cat <&3 | grep "Hello"'
+  #     interval: 10s
+  #     timeout: 5s
+  #     retries: 5
+  #   networks:
+  #     - 'stack'
+
+  # clickhouse:
+  #   image: clickhouse/clickhouse-server:23.1.2-alpine
+  #   volumes:
+  #     - ./.vucod/clickhouse/logs:/var/log/clickhouse-server
+  #     - ./.vucod/clickhouse/db:/var/lib/clickhouse
+  #     - ./docker/configs/clickhouse:/etc/clickhouse-server/conf.d
+  #     # - ./docker/clickhouse/init-defaults.sh:/docker-entrypoint-initdb.d/init-defaults.sh:ro
+
+  #   healthcheck:
+  #     test: ['CMD', 'wget', '--spider', '-q', 'localhost:8123/ping']
+  #     interval: 5s
+  #     timeout: 5s
+  #     retries: 6
+  #     start_period: 10s
+  #   environment:
+  #     CLICKHOUSE_DB: public
+  #     CLICKHOUSE_USER: test
+  #     CLICKHOUSE_PASSWORD: test
+  #   ports:
+  #     - 8123:8123
+  #   networks:
+  #     - 'stack'
+
+  # cache:
+  #   container_name: cache
+  #   image: redis:7
+  #   networks:
+  #     - stack
