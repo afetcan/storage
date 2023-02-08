@@ -179,7 +179,6 @@ export async function createMikroORMPostgress(config: Config): Promise<MikroORM>
     debug: data.debug || undefined,
     dbName: data.db || undefined,
     loggerFactory: (options: LoggerOptions) => new MyLogger(options),
-    type: 'postgresql',
     allowGlobalContext: config?.globalContext || false,
     namingStrategy: EntityCaseNamingStrategy,
     highlighter: data.highlight ? new SqlHighlighter() : undefined,

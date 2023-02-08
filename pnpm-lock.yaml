@@ -3,10 +3,10 @@ lockfileVersion: 5.4
 specifiers:
   '@antfu/eslint-config': ^0.35.1
   '@faker-js/faker': ^7.6.0
-  '@mikro-orm/core': ^5.6.8
-  '@mikro-orm/migrations': ^5.6.8
-  '@mikro-orm/postgresql': ^5.6.8
-  '@mikro-orm/seeder': ^5.6.8
+  '@mikro-orm/core': ^6.0.0-dev.34
+  '@mikro-orm/migrations': ^6.0.0-dev.34
+  '@mikro-orm/postgresql': ^6.0.0-dev.34
+  '@mikro-orm/seeder': ^6.0.0-dev.34
   '@mikro-orm/sql-highlighter': ^1.0.1
   '@swc/core': ^1.3.32
   '@types/geojson': ^7946.0.10
@@ -32,10 +32,10 @@ specifiers:
   zod: ^3.20.2
 
 dependencies:
-  '@mikro-orm/core': 5.6.8_senegxjvdcu2r6smj3pteqzpxy
-  '@mikro-orm/migrations': 5.6.8_@mikro-orm+core@5.6.8
-  '@mikro-orm/postgresql': 5.6.8_37zihfcwtvjtcfyl4svfbh4ltu
-  '@mikro-orm/seeder': 5.6.8_@mikro-orm+core@5.6.8
+  '@mikro-orm/core': 6.0.0-dev.34
+  '@mikro-orm/migrations': 6.0.0-dev.34_qafuu7fnsnb7zod736vowsvabu
+  '@mikro-orm/postgresql': 6.0.0-dev.34_qafuu7fnsnb7zod736vowsvabu
+  '@mikro-orm/seeder': 6.0.0-dev.34_qafuu7fnsnb7zod736vowsvabu
   '@mikro-orm/sql-highlighter': 1.0.1
   '@swc/core': 1.3.32
   '@types/uuid': 9.0.0
@@ -429,6 +429,7 @@ packages:
   /@faker-js/faker/7.6.0:
     resolution: {integrity: sha512-XK6BTq1NDMo9Xqw/YkYyGjSsg44fbNwYRx7QK2CuoQgyy+f1rrTDHoExVM5PsyXCtfl2vs2vVJ0MN0yN6LppRw==}
     engines: {node: '>=14.0.0', npm: '>=6.0.0'}
+    dev: true
 
   /@humanwhocodes/config-array/0.11.8:
     resolution: {integrity: sha512-UybHIJzJnR5Qc/MsD9Kr+RpO2h+/P1GhOwdiLPXK5TWk5sgTdu88bTD9UP+CKbPPh5Rni1u0GjAdYQLemG8g+g==}
@@ -460,154 +461,31 @@ packages:
       type-detect: 4.0.8
     dev: true
 
-  /@mikro-orm/core/5.6.8_senegxjvdcu2r6smj3pteqzpxy:
-    resolution: {integrity: sha512-R0ex3+3DNXuVm6eZz7t8pXowYkfOH3SU7WsdIeUVvV8I1KLsv3nJqA6ZcrYbyeW68ULho4gWjbkLeiLee88idQ==}
-    engines: {node: '>= 14.0.0'}
-    peerDependencies:
-      '@mikro-orm/better-sqlite': ^5.0.0
-      '@mikro-orm/entity-generator': ^5.0.0
-      '@mikro-orm/mariadb': ^5.0.0
-      '@mikro-orm/migrations': ^5.0.0
-      '@mikro-orm/migrations-mongodb': ^5.0.0
-      '@mikro-orm/mongodb': ^5.0.0
-      '@mikro-orm/mysql': ^5.0.0
-      '@mikro-orm/postgresql': ^5.0.0
-      '@mikro-orm/seeder': ^5.0.0
-      '@mikro-orm/sqlite': ^5.0.0
-    peerDependenciesMeta:
-      '@mikro-orm/better-sqlite':
-        optional: true
-      '@mikro-orm/entity-generator':
-        optional: true
-      '@mikro-orm/mariadb':
-        optional: true
-      '@mikro-orm/migrations':
-        optional: true
-      '@mikro-orm/migrations-mongodb':
-        optional: true
-      '@mikro-orm/mongodb':
-        optional: true
-      '@mikro-orm/mysql':
-        optional: true
-      '@mikro-orm/postgresql':
-        optional: true
-      '@mikro-orm/seeder':
-        optional: true
-      '@mikro-orm/sqlite':
-        optional: true
+  /@mikro-orm/core/6.0.0-dev.34:
+    resolution: {integrity: sha512-k3H0XGxSXtncEG6SMeSd8g/4U+Y8SJ3fIv/PNRzo4k6nty8hvXNgGWKIvod6BV4U8VL85Ev2vvP0b5aLNaI1Eg==}
+    engines: {node: '>= 16.0.0'}
     dependencies:
-      '@mikro-orm/migrations': 5.6.8_@mikro-orm+core@5.6.8
-      '@mikro-orm/postgresql': 5.6.8_37zihfcwtvjtcfyl4svfbh4ltu
-      '@mikro-orm/seeder': 5.6.8_@mikro-orm+core@5.6.8
       acorn-loose: 8.3.0
       acorn-walk: 8.2.0
       dotenv: 16.0.3
       fs-extra: 11.1.0
       globby: 11.1.0
-      mikro-orm: 5.6.8
+      mikro-orm: 6.0.0-dev.34
       reflect-metadata: 0.1.13
     dev: false
 
-  /@mikro-orm/knex/5.6.8_elr4oniab43yp54uhiarqc753i:
-    resolution: {integrity: sha512-u9hScJ2pcWEDmh+Hj06Skny1gpmMjbcxJXvUZRkZW46P89juFLTS6xiR+ZqhhH61KVXM69Ua8ttWw08HVLoCKw==}
-    engines: {node: '>= 14.0.0'}
+  /@mikro-orm/knex/6.0.0-dev.34_p7t7fgtnnn2o6dwmp7demwf3sy:
+    resolution: {integrity: sha512-Y8v4YHO8oois3q4J1y1RMYVljeDCKgZw0h9VLNSQb1IMPCUqyNHwEV4MKqs7ywzrsUN8/u2HBIdeUIXERFiB2w==}
+    engines: {node: '>= 16.0.0'}
     peerDependencies:
-      '@mikro-orm/core': ^5.0.0
-      '@mikro-orm/entity-generator': ^5.0.0
-      '@mikro-orm/migrations': ^5.0.0
-      better-sqlite3: ^8.0.0
-      mssql: ^7.0.0
-      mysql: ^2.18.1
-      mysql2: ^2.1.0
-      pg: ^8.0.3
-      sqlite3: ^5.0.0
-    peerDependenciesMeta:
-      '@mikro-orm/entity-generator':
-        optional: true
-      '@mikro-orm/migrations':
-        optional: true
-      better-sqlite3:
-        optional: true
-      mssql:
-        optional: true
-      mysql:
-        optional: true
-      mysql2:
-        optional: true
-      pg:
-        optional: true
-      sqlite3:
-        optional: true
+      '@mikro-orm/core': ~6.0.0-dev.34
     dependencies:
-      '@mikro-orm/core': 5.6.8_senegxjvdcu2r6smj3pteqzpxy
-      '@mikro-orm/migrations': 5.6.8_@mikro-orm+core@5.6.8
+      '@mikro-orm/core': 6.0.0-dev.34
       fs-extra: 11.1.0
-      knex: 2.4.2_pg@8.8.0
-      pg: 8.8.0
+      knex: 2.4.2_pg@8.9.0
       sqlstring: 2.3.3
     transitivePeerDependencies:
-      - pg-native
-      - supports-color
-      - tedious
-    dev: false
-
-  /@mikro-orm/knex/5.6.8_f3xboggukbddinh22hmjcnmoue:
-    resolution: {integrity: sha512-u9hScJ2pcWEDmh+Hj06Skny1gpmMjbcxJXvUZRkZW46P89juFLTS6xiR+ZqhhH61KVXM69Ua8ttWw08HVLoCKw==}
-    engines: {node: '>= 14.0.0'}
-    peerDependencies:
-      '@mikro-orm/core': ^5.0.0
-      '@mikro-orm/entity-generator': ^5.0.0
-      '@mikro-orm/migrations': ^5.0.0
-      better-sqlite3: ^8.0.0
-      mssql: ^7.0.0
-      mysql: ^2.18.1
-      mysql2: ^2.1.0
-      pg: ^8.0.3
-      sqlite3: ^5.0.0
-    peerDependenciesMeta:
-      '@mikro-orm/entity-generator':
-        optional: true
-      '@mikro-orm/migrations':
-        optional: true
-      better-sqlite3:
-        optional: true
-      mssql:
-        optional: true
-      mysql:
-        optional: true
-      mysql2:
-        optional: true
-      pg:
-        optional: true
-      sqlite3:
-        optional: true
-    dependencies:
-      '@mikro-orm/core': 5.6.8_senegxjvdcu2r6smj3pteqzpxy
-      '@mikro-orm/migrations': 5.6.8_@mikro-orm+core@5.6.8
-      fs-extra: 11.1.0
-      knex: 2.4.2
-      sqlstring: 2.3.3
-    transitivePeerDependencies:
-      - pg-native
-      - supports-color
-      - tedious
-    dev: false
-
-  /@mikro-orm/migrations/5.6.8_@mikro-orm+core@5.6.8:
-    resolution: {integrity: sha512-7KlbinxGhX91aNphUITCVbHfwc6zF5Sd/hafi0bx9bqNUMycfmZN5dLPqvIPDFnibBo17tgRca+CtuoQ8OXqdw==}
-    engines: {node: '>= 14.0.0'}
-    peerDependencies:
-      '@mikro-orm/core': ^5.0.0
-    dependencies:
-      '@mikro-orm/core': 5.6.8_senegxjvdcu2r6smj3pteqzpxy
-      '@mikro-orm/knex': 5.6.8_f3xboggukbddinh22hmjcnmoue
-      fs-extra: 11.1.0
-      knex: 2.4.2
-      umzug: 3.2.1
-    transitivePeerDependencies:
-      - '@mikro-orm/entity-generator'
       - better-sqlite3
-      - mssql
       - mysql
       - mysql2
       - pg
@@ -617,30 +495,59 @@ packages:
       - tedious
     dev: false
 
-  /@mikro-orm/postgresql/5.6.8_37zihfcwtvjtcfyl4svfbh4ltu:
-    resolution: {integrity: sha512-nuKyDSry9jT3EXIxRv5KtLoL8JWJ9yTzo+ND8+nr/qWrZkQkS0omMpwvZYyB0v40uZmDkurEMLduvblfZDqoww==}
-    engines: {node: '>= 14.0.0'}
+  /@mikro-orm/knex/6.0.0-dev.34_qafuu7fnsnb7zod736vowsvabu:
+    resolution: {integrity: sha512-Y8v4YHO8oois3q4J1y1RMYVljeDCKgZw0h9VLNSQb1IMPCUqyNHwEV4MKqs7ywzrsUN8/u2HBIdeUIXERFiB2w==}
+    engines: {node: '>= 16.0.0'}
     peerDependencies:
-      '@mikro-orm/core': ^5.0.0
-      '@mikro-orm/entity-generator': ^5.0.0
-      '@mikro-orm/migrations': ^5.0.0
-      '@mikro-orm/seeder': ^5.0.0
-    peerDependenciesMeta:
-      '@mikro-orm/entity-generator':
-        optional: true
-      '@mikro-orm/migrations':
-        optional: true
-      '@mikro-orm/seeder':
-        optional: true
+      '@mikro-orm/core': ~6.0.0-dev.34
     dependencies:
-      '@mikro-orm/core': 5.6.8_senegxjvdcu2r6smj3pteqzpxy
-      '@mikro-orm/knex': 5.6.8_elr4oniab43yp54uhiarqc753i
-      '@mikro-orm/migrations': 5.6.8_@mikro-orm+core@5.6.8
-      '@mikro-orm/seeder': 5.6.8_@mikro-orm+core@5.6.8
-      pg: 8.8.0
+      '@mikro-orm/core': 6.0.0-dev.34
+      fs-extra: 11.1.0
+      knex: 2.4.2
+      sqlstring: 2.3.3
     transitivePeerDependencies:
       - better-sqlite3
-      - mssql
+      - mysql
+      - mysql2
+      - pg
+      - pg-native
+      - sqlite3
+      - supports-color
+      - tedious
+    dev: false
+
+  /@mikro-orm/migrations/6.0.0-dev.34_qafuu7fnsnb7zod736vowsvabu:
+    resolution: {integrity: sha512-kauosmrR8yNrj5BjYIzqyB5puSCsnQI8o0gG77q9EeF0eCmNkrN6ORX68FwzXcI5EXUsIf9uq7Oo40MEeJV7kA==}
+    engines: {node: '>= 16.0.0'}
+    peerDependencies:
+      '@mikro-orm/core': ~6.0.0-dev.34
+    dependencies:
+      '@mikro-orm/core': 6.0.0-dev.34
+      '@mikro-orm/knex': 6.0.0-dev.34_qafuu7fnsnb7zod736vowsvabu
+      fs-extra: 11.1.0
+      umzug: 3.2.1
+    transitivePeerDependencies:
+      - better-sqlite3
+      - mysql
+      - mysql2
+      - pg
+      - pg-native
+      - sqlite3
+      - supports-color
+      - tedious
+    dev: false
+
+  /@mikro-orm/postgresql/6.0.0-dev.34_qafuu7fnsnb7zod736vowsvabu:
+    resolution: {integrity: sha512-cA7irS/HlPIfXZPzba1MOPQkKyVK4x9EeDUExTK+BeYjAcDrDbI84X3NBVWA+CCPWsnUGCr20Pfdu3GlawdJpw==}
+    engines: {node: '>= 16.0.0'}
+    peerDependencies:
+      '@mikro-orm/core': ~6.0.0-dev.34
+    dependencies:
+      '@mikro-orm/core': 6.0.0-dev.34
+      '@mikro-orm/knex': 6.0.0-dev.34_p7t7fgtnnn2o6dwmp7demwf3sy
+      pg: 8.9.0
+    transitivePeerDependencies:
+      - better-sqlite3
       - mysql
       - mysql2
       - pg-native
@@ -649,14 +556,13 @@ packages:
       - tedious
     dev: false
 
-  /@mikro-orm/seeder/5.6.8_@mikro-orm+core@5.6.8:
-    resolution: {integrity: sha512-nUsSynVo6yhJTcMgq337+FDJ5xqx9M9VIddJK2FXeCppSGZ4xGEwjSjbecLbc8J7FxsIkClttdev29BLz/LYmw==}
-    engines: {node: '>= 14.0.0'}
+  /@mikro-orm/seeder/6.0.0-dev.34_qafuu7fnsnb7zod736vowsvabu:
+    resolution: {integrity: sha512-6Wo/nLCNthxNRmjlmcmwJZQra6NL4V9nODQCzxb0nFyKkVj91wkjwanPG3pbdw1iFsxK8pyvDyQ7kSOdVaNL6Q==}
+    engines: {node: '>= 16.0.0'}
     peerDependencies:
-      '@mikro-orm/core': ^5.0.0
+      '@mikro-orm/core': ~6.0.0-dev.34
     dependencies:
-      '@faker-js/faker': 7.6.0
-      '@mikro-orm/core': 5.6.8_senegxjvdcu2r6smj3pteqzpxy
+      '@mikro-orm/core': 6.0.0-dev.34
       fs-extra: 11.1.0
       globby: 11.1.0
     dev: false
@@ -2909,7 +2815,7 @@ packages:
       - supports-color
     dev: false
 
-  /knex/2.4.2_pg@8.8.0:
+  /knex/2.4.2_pg@8.9.0:
     resolution: {integrity: sha512-tMI1M7a+xwHhPxjbl/H9K1kHX+VncEYcvCx5K00M16bWvpYPKAZd6QrCu68PtHAdIZNQPWZn0GVhqVBEthGWCg==}
     engines: {node: '>=12'}
     hasBin: true
@@ -2946,7 +2852,7 @@ packages:
       getopts: 2.3.0
       interpret: 2.2.0
       lodash: 4.17.21
-      pg: 8.8.0
+      pg: 8.9.0
       pg-connection-string: 2.5.0
       rechoir: 0.8.0
       resolve-from: 5.0.0
@@ -3061,9 +2967,9 @@ packages:
       braces: 3.0.2
       picomatch: 2.3.1
 
-  /mikro-orm/5.6.8:
-    resolution: {integrity: sha512-2dbCjQuj4HQBKtKWAS+bky7M5eallUBYu5FTXGs5QA707SEaAMLW9bEGJ3Iwygv/+9uWmeq7UBWfdlWoVqhmZQ==}
-    engines: {node: '>= 14.0.0'}
+  /mikro-orm/6.0.0-dev.34:
+    resolution: {integrity: sha512-oQdWtvTOdRegGCb0yNKKuqOVCKUB7PXgVwoo2gCQLkbRbXZgqbnePOTO9j+uwzJfrxZPy5ZmywWJXx/S2a0apw==}
+    engines: {node: '>= 16.0.0'}
     dev: false
 
   /mimic-fn/2.1.0:
@@ -3325,12 +3231,12 @@ packages:
     engines: {node: '>=4.0.0'}
     dev: false
 
-  /pg-pool/3.5.2_pg@8.8.0:
+  /pg-pool/3.5.2_pg@8.9.0:
     resolution: {integrity: sha512-His3Fh17Z4eg7oANLob6ZvH8xIVen3phEZh2QuyrIl4dQSDVEabNducv6ysROKpDNPSD+12tONZVWfSgMvDD9w==}
     peerDependencies:
       pg: '>=8.0'
     dependencies:
-      pg: 8.8.0
+      pg: 8.9.0
     dev: false
 
   /pg-protocol/1.6.0:
@@ -3348,8 +3254,8 @@ packages:
       postgres-interval: 1.2.0
     dev: false
 
-  /pg/8.8.0:
-    resolution: {integrity: sha512-UXYN0ziKj+AeNNP7VDMwrehpACThH7LUl/p8TDFpEUuSejCUIwGSfxpHsPvtM6/WXFy6SU4E5RG4IJV/TZAGjw==}
+  /pg/8.9.0:
+    resolution: {integrity: sha512-ZJM+qkEbtOHRuXjmvBtOgNOXOtLSbxiMiUVMgE4rV6Zwocy03RicCVvDXgx8l4Biwo8/qORUnEqn2fdQzV7KCg==}
     engines: {node: '>= 8.0.0'}
     peerDependencies:
       pg-native: '>=3.0.1'
@@ -3360,7 +3266,7 @@ packages:
       buffer-writer: 2.0.0
       packet-reader: 1.0.0
       pg-connection-string: 2.5.0
-      pg-pool: 3.5.2_pg@8.8.0
+      pg-pool: 3.5.2_pg@8.9.0
       pg-protocol: 1.6.0
       pg-types: 2.2.0
       pgpass: 1.0.5
