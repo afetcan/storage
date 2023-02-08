@@ -21,6 +21,13 @@
       "open": true,
       "cwd": "./",
       "command": "pnpm test:watch"
+    },
+    {
+      "name": "npmPublish",
+      "description": "npm publish",
+      "open": true,
+      "cwd": "./",
+      "command": "pnpm release"
     }
   ]
 }

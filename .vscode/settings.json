@@ -28,6 +28,15 @@
             "color": "#757575",
             "text": "$(beaker) Test Watch",
             "tooltip": "Postgress Mikro-Orm Test"
-        }
+        },
+        {
+            "command": "terminals.runTerminalByName",
+            "arguments": [
+                "npmPublish"
+            ],
+            "color": "#4ebb00",
+            "text": "$(rocket) npm publish",
+            "tooltip": "npmPublish"
+        },
     ],
 }
