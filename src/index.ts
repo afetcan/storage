@@ -1,5 +1,5 @@
 import { EmergencyEntity, UserEntity } from './entity'
-export type { UserEntity, EmergencyEntity }
+export { UserEntity, EmergencyEntity }
 
 export const entities = [UserEntity, EmergencyEntity]
 export type { ResultInterface } from './types'
