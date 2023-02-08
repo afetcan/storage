@@ -2,7 +2,7 @@
   "name": "@acildeprem/storage",
   "private": false,
   "type": "module",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Storage for acildeprem.com",
   "author": "Mehmet - productdevbook <hi@productdevbook.com>",
   "license": "MIT",
