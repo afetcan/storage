@@ -9,7 +9,7 @@ export class EmergencyRepo {
   constructor(private em: EntityManager, private shared: Shared) {
   }
 
-  async createEmergency(input: CreateGPS, _user: UserEntity): Promise<ResultInterface<EmergencyEntity>> {
+  async createEmergency(input: CreateGPS, _user?: UserEntity): Promise<ResultInterface<EmergencyEntity>> {
     const result: ResultInterface<EmergencyEntity> = { isSuccess: false, message: '', data: undefined }
     try {
       const data = this.em.create(EmergencyEntity, { ...input })
