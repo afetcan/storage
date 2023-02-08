@@ -20,7 +20,7 @@ export default <Options>{
   sourcemap: true,
   clean: true,
   minify: isProduction,
-  external,
+  external: [...external, 'pg-native'],
   // noExternal,
   // skipNodeModulesBundle: true,
   dts: true,
