@@ -4,5 +4,5 @@ import { UserRepo } from '../user'
 export interface Storage {
   destroy(): Promise<void>
   userRepo: UserRepo
-  debtRepo: EmergencyRepo
+  emergencyRepo: EmergencyRepo
 }
