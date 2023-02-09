@@ -9,7 +9,9 @@
 </p>
 
 
-`@acildeprem/storage` TANIMI
+`@acildeprem/storage` veritabanı işlemlerini kolaylaştırmak için yazılmış bir pakettir. Herhangi bir api servisi için kullanılabilir. Typescript ile yazılmıştır. Buradaki veritabanı işlemleri için [MikroORM](https://mikro-orm.io/) kullanılmıştır. Postgresql veritabanı kullanılmıştır. Ama yapı tamamen genişletilebilir. Örneğin CLICKHOUSE ayrıca ayarları yapılarak kullanılabilir. her iki veritabanı da aynı şekilde kullanılabilir.
+
+Bu yüzden projenin amacı veritabanı işlemlerini kolaylaştırmak ve genişletilebilirliği sağlamaktır.
 
 ## NPM Paketi
 
