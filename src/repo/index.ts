@@ -16,14 +16,14 @@ export async function createStorage(orm: MikroORM): Promise<Storage> {
   }
 
   const userRepo = new UserRepo(em, shared)
-  const debtRepo = new EmergencyRepo(em, shared)
+  const emergencyRepo = new EmergencyRepo(em, shared)
 
   const stroge: Storage = {
     destroy: async () => {
       await orm.close()
     },
     userRepo,
-    debtRepo,
+    emergencyRepo,
   }
 
   return stroge
