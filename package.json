@@ -42,7 +42,8 @@
     "test:watch": "vitest --watch",
     "lint": "eslint --ext .ts,.tsx,.js,.jsx .",
     "lint:fix": "eslint --ext .ts,.tsx,.js,.jsx . --fix",
-    "release": "bumpp --commit --push --tag && pnpm publish"
+    "release": "bumpp --commit --push --tag && pnpm publish",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@mikro-orm/core": "^6.0.0-dev.34",
@@ -71,6 +72,7 @@
     "@types/geojson": "^7946.0.10",
     "@types/pg": "^8.6.6",
     "@types/wellknown": "^0.5.4",
+    "@vitest/coverage-c8": "^0.28.4",
     "bumpp": "^8.2.1",
     "consola": "^2.15.3",
     "eslint": "^8.33.0",
