@@ -28,6 +28,9 @@
       "@acildeprem/storage": [
         "./src/index.ts"
       ],
+      "@acildeprem/storage/*": [
+        "./src/*"
+      ]
     }
   },
   "include": [

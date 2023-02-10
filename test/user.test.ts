@@ -1,7 +1,8 @@
 import { afterAll, beforeAll, beforeEach, expect, test } from 'vitest'
 import { MikroORM } from '@mikro-orm/postgresql'
-import { type Storage, UserEntity, createMikroORMPostgress, createStorage } from '@acildeprem/storage'
+import { type Storage, UserEntity, createStorage } from '@acildeprem/storage'
 import { NewUserOnboardInput } from 'src/repo/user'
+import { createMikroORMPostgress } from '@acildeprem/storage/createMikroORMPostgress'
 
 let orm: MikroORM
 let storage: Storage
