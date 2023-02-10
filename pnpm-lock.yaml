@@ -21,6 +21,7 @@ specifiers:
   eslint: ^8.33.0
   geojson: ^0.5.0
   graphql: 16.6.0
+  knex: ^2.4.2
   nanoid: ^4.0.1
   pg: ^8.9.0
   slugify: ^1.6.5
@@ -47,6 +48,7 @@ dependencies:
   dotenv: 16.0.3
   geojson: 0.5.0
   graphql: 16.6.0
+  knex: 2.4.2_pg@8.9.0
   nanoid: 4.0.1
   pg: 8.9.0
   slugify: 1.6.5
