@@ -19,6 +19,10 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
+    },
+    "./createMikroORMPostgress": {
+      "types": "./dist/createMikroORMPostgress.d.ts",
+      "import": "./dist/createMikroORMPostgress.js"
     }
   },
   "module": "./dist/index.js",

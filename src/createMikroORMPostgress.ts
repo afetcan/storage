@@ -5,8 +5,8 @@ import { SqlHighlighter } from '@mikro-orm/sql-highlighter'
 import zod from 'zod'
 import { config } from 'dotenv'
 import { diary, enable, error, info } from 'diary'
-import { DatabaseSeeder } from '../seeders/DatabaseSeeder'
-import { entities } from '../entity'
+import { entities } from './entity'
+import { DatabaseSeeder } from './seeders/DatabaseSeeder'
 
 enable('*')
 

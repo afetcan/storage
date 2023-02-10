@@ -12,7 +12,7 @@ const noExternal = [
 ]
 
 export default <Options>{
-  entryPoints: ['src/index.ts'],
+  entryPoints: ['src/index.ts', 'src/createMikroORMPostgress.ts'],
   outDir: 'dist',
   target: 'node18', // needed for working ESM
   format: ['esm'],
