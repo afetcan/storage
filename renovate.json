@@ -27,7 +27,8 @@
                 "dependencies"
             ],
             "addLabels": [
-                "dependencies"
+                "dependencies",
+                "test"
             ]
         }
     ]
