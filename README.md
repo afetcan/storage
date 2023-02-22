@@ -1,44 +1,41 @@
-# STORAGE AÇIKLAMASI
+# STORAGE
 
 <p>
-      <a href="https://www.npmjs.com/package/@acildeprem/storage"><img src="https://img.shields.io/npm/v/@acildeprem/storage.svg?style=flat&colorA=002438&colorB=28CF8D" alt="Version"></a>
-      <a href="https://www.npmjs.com/package/@acildeprem/storage"><img src="https://img.shields.io/npm/dm/@acildeprem/storage.svg?style=flat&colorA=002438&colorB=28CF8D" alt="Downloads"></a>
-      <a href="./LICENSE"><img src="https://img.shields.io/github/license/acildeprem/storage.svg?style=flat&colorA=002438&colorB=28CF8D" alt="License"></a>
-      <a href="https://github.com/acildeprem/storage">
-      <img src="https://img.shields.io/github/stars/acildeprem/storage.svg?style=social&label=Star&maxAge=2592000" alt="Github Stars"> </a>
+      <a href="https://www.npmjs.com/package/@afetcan/storage"><img src="https://img.shields.io/npm/v/@afetcan/storage.svg?style=flat&colorA=002438&colorB=28CF8D" alt="Version"></a>
+      <a href="https://www.npmjs.com/package/@afetcan/storage"><img src="https://img.shields.io/npm/dm/@afetcan/storage.svg?style=flat&colorA=002438&colorB=28CF8D" alt="Downloads"></a>
+      <a href="./LICENSE"><img src="https://img.shields.io/github/license/afetcan/storage.svg?style=flat&colorA=002438&colorB=28CF8D" alt="License"></a>
+      <a href="https://github.com/afetcan/storage">
+      <img src="https://img.shields.io/github/stars/afetcan/storage.svg?style=social&label=Star&maxAge=2592000" alt="Github Stars"> </a>
 </p>
 
 
-`@acildeprem/storage` veritabanı işlemlerini kolaylaştırmak için yazılmış bir pakettir. Herhangi bir api servisi için kullanılabilir. Typescript ile yazılmıştır. Buradaki veritabanı işlemleri için [MikroORM](https://mikro-orm.io/) kullanılmıştır. Postgresql veritabanı kullanılmıştır. Ama yapı tamamen genişletilebilir. Örneğin CLICKHOUSE ayrıca ayarları yapılarak kullanılabilir. her iki veritabanı da aynı şekilde kullanılabilir.
+`@afetcan/storage` is a package written to facilitate database operations. It can be used for any api service. Written in Typescript. [MikroORM](https://mikro-orm.io/) is used for database operations here. Postgresql database is used. But the structure is fully expandable. For example, CLICKHOUSE can also be used by adjusting its settings. both databases can be used in the same way.
 
-Bu yüzden projenin amacı veritabanı işlemlerini kolaylaştırmak ve genişletilebilirliği sağlamaktır.
+Therefore, the aim of the project is to facilitate database operations and provide extensibility.
 
-## NPM Paketi
-
-
-### Kurulum
+### Setup
 ```bash
-pnpm install @acildeprem/storage
+pnpm install @afetcan/storage
 ```
 
-###  Kullanım
+### Usage
 ```ts
-import { ... } from '@acildeprem/storage' 
+import { ... } from '@afetcan/storage' 
 ```
 
-## Gereksinimler
+## Requirements
 
 - [Node.js](https://nodejs.org/en/) 18.0.0+
 - [pnpm](https://pnpm.io/) 7.26.3+
 
-## Kullandığımız teknolojiler
+## Dependencies
 - [MikroORM 6.0.0-dev.34](https://mikro-orm.io/docs/installation)
 - [SWC 1.3.32](https://swc.rs/docs/getting-started)
 - [Faker 7.6.0](https://fakerjs.dev/guide/)
 
-## Local Geliştirme - Development
+## Local Development
 
-### Kurulum
+### Setup
 ```bash
 pnpm install
 ```
@@ -54,8 +51,8 @@ pnpm build
 ```
 
 
-# Linkler
+# Links
 
-- [Web Sitesi](https://acildeprem.com)
-- [Discord](https://discord.acildeprem.com)
-- [Twitter](https://twitter.com/acildepremcom)
+- [Web Sitesi](https://afetcan.com)
+- [Discord](https://discord.afetcan.com)
+- [Twitter](https://twitter.com/afetcancom)
