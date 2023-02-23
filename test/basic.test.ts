@@ -1,7 +1,7 @@
 import { afterAll, beforeAll, beforeEach, expect, test } from 'vitest'
 import { MikroORM } from '@mikro-orm/postgresql'
-import { type Storage, UserEntity, createStorage } from '@acildeprem/storage'
-import { createMikroORMPostgress } from '@acildeprem/storage/createMikroORMPostgress'
+import { type Storage, UserEntity, createStorage } from '@afetcan/storage'
+import { createMikroORMPostgress } from '@afetcan/storage/createMikroORMPostgress'
 
 let orm: MikroORM
 
@@ -34,15 +34,15 @@ beforeEach(async () => {
 
 test('user CRUD test', async () => {
   const user = orm.em.create(UserEntity, {
-    email: 'hello@acildeprem.com',
-    fullName: 'acildeprem',
+    email: 'hello@afetcan.com',
+    fullName: 'afetcan',
     createdAt: 'Tue Dec 20 2022 16:32:10 GMT+0300 (GMT+03:00)',
     updatedAt: 'Tue Dec 20 2022 16:32:10 GMT+0300 (GMT+03:00)',
     externalAuthUserId: '123',
     isAdmin: false,
     isSuperAdmin: false,
     superTokensUserId: '123',
-    username: 'acildeprem',
+    username: 'afetcan',
   })
   await orm.em.persist(user).flush()
 
@@ -51,7 +51,7 @@ test('user CRUD test', async () => {
   const [u1] = await orm.em.find(UserEntity, user)
   expect(u1).toBeInstanceOf(UserEntity)
 
-  u1.fullName = 'acildeprem'
+  u1.fullName = 'afetcan'
   await orm.em.flush()
 
   orm.em.remove(u1)

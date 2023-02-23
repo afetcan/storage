@@ -25,7 +25,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@acildeprem/storage': alias('./src/'),
+      '@afetcan/storage': alias('./src/'),
     },
   },
 })

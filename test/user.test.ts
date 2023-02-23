@@ -1,8 +1,8 @@
 import { afterAll, beforeAll, beforeEach, expect, test } from 'vitest'
 import { MikroORM } from '@mikro-orm/postgresql'
-import { type Storage, UserEntity, createStorage } from '@acildeprem/storage'
+import { type Storage, UserEntity, createStorage } from '@afetcan/storage'
 import { NewUserOnboardInput } from 'src/repo/user'
-import { createMikroORMPostgress } from '@acildeprem/storage/createMikroORMPostgress'
+import { createMikroORMPostgress } from '@afetcan/storage/createMikroORMPostgress'
 
 let orm: MikroORM
 let storage: Storage
@@ -35,15 +35,15 @@ beforeEach(async () => {
 
 test('user CRUD test', async () => {
   const user = orm.em.create(UserEntity, {
-    email: 'hello@acildeprem.com',
-    fullName: 'acildeprem',
+    email: 'hello@afetcan.com',
+    fullName: 'afetcan',
     createdAt: 'Tue Dec 20 2022 16:32:10 GMT+0300 (GMT+03:00)',
     updatedAt: 'Tue Dec 20 2022 16:32:10 GMT+0300 (GMT+03:00)',
     externalAuthUserId: '123',
     isAdmin: false,
     isSuperAdmin: false,
     superTokensUserId: '123',
-    username: 'acildeprem',
+    username: 'afetcan',
   })
   await orm.em.persist(user).flush()
 
@@ -52,7 +52,7 @@ test('user CRUD test', async () => {
   const [u1] = await orm.em.find(UserEntity, user)
   expect(u1).toBeInstanceOf(UserEntity)
 
-  u1.fullName = 'acildeprem'
+  u1.fullName = 'afetcan'
   await orm.em.flush()
 
   orm.em.remove(u1)
@@ -65,14 +65,14 @@ test('user CRUD test', async () => {
 test('newUserOnboard', async () => {
   const user = orm.em.create(UserEntity, {
     id: 'f9648203-f2a0-44ce-9c97-620a33221485',
-    email: 'hello@acildeprem.com',
+    email: 'hello@afetcan.com',
     createdAt: 'Tue Dec 20 2022 16:32:10 GMT+0300 (GMT+03:00)',
     updatedAt: 'Tue Dec 20 2022 16:32:10 GMT+0300 (GMT+03:00)',
     externalAuthUserId: '123',
     isAdmin: false,
     isSuperAdmin: false,
     superTokensUserId: '123',
-    username: 'acildeprem',
+    username: 'afetcan',
   })
 
   await orm.em.persist(user).flush()

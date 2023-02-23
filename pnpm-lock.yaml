@@ -44,6 +44,7 @@ dependencies:
   '@mikro-orm/sql-highlighter': 1.0.1
   '@swc/core': 1.3.36
   '@types/uuid': 9.0.1
+  consola: 2.15.3
   diary: 0.4.3
   dotenv: 16.0.3
   geojson: 0.5.0
@@ -66,7 +67,6 @@ devDependencies:
   '@types/wellknown': 0.5.4
   '@vitest/coverage-c8': 0.28.5
   bumpp: 8.2.1
-  consola: 2.15.3
   eslint: 8.34.0
   tslib: 2.5.0
   tsup: 6.6.3_yfhgfzi43swbioau7ykdgo6mvi
@@ -1536,7 +1536,7 @@ packages:
 
   /consola/2.15.3:
     resolution: {integrity: sha512-9vAdYbHj6x2fLKC4+oPH0kFzY/orMZyG2Aj+kNylHxKGJ/Ed4dpNyAQYwJOdqO4zdM7XpVHmyejQDcQHrnuXbw==}
-    dev: true
+    dev: false
 
   /convert-source-map/1.9.0:
     resolution: {integrity: sha512-ASFBup0Mz1uyiIjANan1jzLQami9z1PoYSZCiiYW2FczPbenXc45FZdBZLzOT+r6+iciuEModtmCti+hjaAk0A==}
