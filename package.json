@@ -2,7 +2,7 @@
   "name": "@afetcan/storage",
   "private": false,
   "type": "module",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "description": "Storage for afetcan.com",
   "author": "Mehmet - productdevbook <hi@productdevbook.com>",
   "license": "MIT",
