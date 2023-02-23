@@ -17,11 +17,9 @@ export default <Options>{
   target: 'node18', // needed for working ESM
   format: ['esm'],
   // splitting: false,
-  sourcemap: true,
-  clean: true,
   minify: isProduction,
-  external: [...external, 'pg-native'],
+  external: [...external],
   // noExternal,
-  // skipNodeModulesBundle: true,
+  skipNodeModulesBundle: true,
   dts: true,
 }
