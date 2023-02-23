@@ -5,8 +5,11 @@ import { SqlHighlighter } from '@mikro-orm/sql-highlighter'
 import zod from 'zod'
 import { config } from 'dotenv'
 import { diary, enable, error, info } from 'diary'
-import { entities } from './entity'
+
+import { Migrator } from '@mikro-orm/migrations'
+import { SeedManager } from '@mikro-orm/seeder'
 import { DatabaseSeeder } from './seeders/DatabaseSeeder'
+import { entities } from './entity'
 
 enable('*')
 
@@ -196,6 +199,7 @@ export async function createMikroORMPostgress(config: Config): Promise<MikroORM>
     seeder: {
       path: join(distPath, 'seeders'),
     },
+    extensions: [Migrator, SeedManager],
     migrations: {
       path: join(distPath, 'migrations'),
       pathTs: join(distPath, 'migrations'),
