@@ -52,7 +52,7 @@
     "test:watch": "vitest --watch",
     "lint": "eslint --ext .ts,.tsx,.js,.jsx .",
     "lint:fix": "eslint --ext .ts,.tsx,.js,.jsx . --fix",
-    "release": "bumpp --commit --push --tag && pnpm publish",
+    "release": "pnpm build && bumpp --commit --push --tag && pnpm publish",
     "coverage": "vitest run --coverage"
   },
   "dependencies": {
