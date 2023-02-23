@@ -55,4 +55,4 @@ pnpm build
 
 - [Web Sitesi](https://afetcan.com)
 - [Discord](https://discord.afetcan.com)
-- [Twitter](https://twitter.com/afetcancom)
+- [Twitter](https://twitter.com/afetcanapp)
