@@ -85,7 +85,7 @@
     "@types/pg": "^8.6.6",
     "@types/wellknown": "^0.5.4",
     "@vitest/coverage-c8": "^0.28.5",
-    "bumpp": "^8.2.1",
+    "bumpp": "^9.0.0",
     "eslint": "^8.34.0",
     "tslib": "^2.5.0",
     "tsup": "^6.6.3",
