@@ -71,4 +71,4 @@ jobs:
 
       - name: 📝 Upload coverage
         if: always()
-        uses: davelosert/vitest-coverage-report-action@v1
+        uses: davelosert/vitest-coverage-report-action@v2
