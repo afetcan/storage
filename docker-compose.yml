@@ -39,7 +39,7 @@ services:
 
   afetcan_directus:
     container_name: afetcan_directus
-    image: directus/directus:9.22.4
+    image: directus/directus:10.6.3
     ports:
       - 8055:8055
     volumes:
