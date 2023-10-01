@@ -8,7 +8,7 @@ volumes:
 
 services:
   afetcan_db:
-    image: postgis/postgis:15-master
+    image: postgis/postgis:16-master
     restart: always
     volumes:
       - ./docker/pg-init-scripts:/docker-entrypoint-initdb.d
